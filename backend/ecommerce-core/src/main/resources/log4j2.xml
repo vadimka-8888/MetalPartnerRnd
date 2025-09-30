@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration xmlns="https://logging.apache.org/xml/ns"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="
+                   https://logging.apache.org/xml/ns
+                   https://logging.apache.org/xml/ns/log4j-config-2.xsd">
+
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <JsonTemplateLayout eventTemplateUri="classpath:logging_configs/main_log4j_layout.json"/>
+        </Console>
+        <File name="File" fileName="log/information.log">
+            <JsonTemplateLayout eventTemplateUri="classpath:logging_configs/main_log4j_layout.json"/>
+            <!-- <BurstFilter level="info" rate="3" maxBurst="3" /> -->
+        </File>
+    </Appenders>
+ 
+    <Loggers>
+        <Logger name= "ru.metal_partner_rnd.ecommerce_core.controllers" level="info" additivity="false">
+            <AppenderRef ref="File" />
+        </Logger>
+
+        <!-- Root Logger -->
+        <Root level="error">
+            <AppenderRef ref="File"/>
+        </Root>
+    </Loggers>
+ 
+ 
+</Configuration>
