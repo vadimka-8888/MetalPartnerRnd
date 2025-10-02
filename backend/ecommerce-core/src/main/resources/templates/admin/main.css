@@ -16,10 +16,18 @@ body {
     background: var(--secondary-color);
 	color: var(--main-bg-color);
     margin: 0;
-	height: 40px;
+	height: 70px;
+	overflow: hidden;
+}
+
+.main-panel { 
+	width: 85%;
+	display: inline-block;
 }
 
 .log-in-block {
+	width: 15%;
+	display: inline-block;
 }
 
 .section {
