@@ -1,0 +1,53 @@
+@import url("variables.css");
+@import url("select.css");
+@import url("admin-header.css");
+@import url("admin-navigation.css");
+
+body {
+    background: var(--main-bg-color);
+	margin: 0;
+}
+
+.main-container {
+	display: flex;
+	
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+html, body, .main-container {
+	height: 100%;
+}
+
+.main-page {
+	flex: 1 0 auto;
+	
+	display: grid;
+	grid-template-columns: 3px 4fr 3px 20fr;
+	
+    background: var(--color-bg);
+}
+
+.main-content > p {
+	margin: 0px;
+	padding: 10px;
+	font-family: var(--font-family);
+	font-size: 1.2rem;
+}
+
+.simple-divider {
+	flex: 0 0 auto;
+	height: 7px;
+	
+	background: var(--color-3);
+}
+
+.simple-vertical-divider {
+	background: var(--color-4);
+}
+
+.clear-item { //?
+	clear: both;
+}
+
+.footer { background: var(--color-2); color: var(--color-bg); clear: left; }

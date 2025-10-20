@@ -1,31 +1,42 @@
 <!DOCTYPE html>
-<head>
+<html>
 	<head>
         <title>Admin Panel</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <link rel="stylesheet" type="text/css" href="./main.css">
-		<meta name="description" content="Металлопрокат и другие изделия из металла с доставкой по Ростовской Области"
-        <!--[if lt IE 9]>
-            <script>
-                var e = ("article, aside, figcaption, figure, footer, header, hgroup, section, time").split(', ');
-                for (var i = 0; i < e.length; i++) {
-                    document.createElement(e[i]);
-                }
-            </script>
-        <![endif]-->
+        <link rel="stylesheet" type="text/css" href="../../static/css/main.css">
+		<meta name="description" content="Металлопрокат и другие изделия из металла с доставкой по Ростовской Области">
 	</head>
     <body>
-        <header class="header">
-            <div class="main-panel">
-                <h2>Металл Партнёр</h2>
-            </div>
-			<div class="log-in-block">
-				<p>Администратор</p>
+		<div class="main-container">
+			<header class="header-container">
+				<div class="header-main-panel">
+					<h1>Металл Партнёр</h1>
+				</div>
+				<div class="header-role-block">
+					<div>
+						<div id="role-select" class="custom-select">
+							<select title="Role" >
+								<option name="admin" selected>Администратор</option>
+							</select>
+						<div>
+					<div>
+				</div>
+			</header>
+			<div class="simple-divider"></div>
+			<div class="main-page">
+				<div class="simple-vertical-divider"></div>
+				<nav class="navigation">
+					<button id="menu-button" name="menu-button">Главная</button>
+					<button id="menu-button" name="menu-button">Прайс-лист</button>
+					<button id="menu-button" name="menu-button">Данные компании</button>
+					<button id="menu-button" name="menu-button">Сообщения</button>
+					<button id="menu-button" name="menu-button">Статистика</button>
+				</nav>
+				<div class="simple-vertical-divider"></div>
+				<div class="main-content">
+					<p>Загрузить новый прайс-лист</p>
+				</div>
 			</div>
-			<div class="clear-item"></div>
-        </header>
-        <div class="section">
-            <p>Загрузить новый прайс-лист</p>
-        </div>
+		</div>
 	</body>
-</head>
+</html>

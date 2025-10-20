@@ -1,0 +1,23 @@
+@import("variables.css");
+
+.navigation {
+	display: flex;
+	flex-direction: column;
+	
+	margin: 0px 0px 0px 0px;
+	background: var(--color-2);
+}
+
+.navigation > button {
+	flex: 0 0 auto;
+	height: 5%;
+	
+	border-width: 0px 0px 1px 0px;
+	border-style: solid;
+	border-color: var(--color-3);
+	background: var(--color-2);
+	
+	font-family: var(--font-family);
+	font-size: 1.2rem;
+	color: var(--color-bg);
+}
