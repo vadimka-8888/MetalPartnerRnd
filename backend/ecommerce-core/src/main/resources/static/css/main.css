@@ -2,51 +2,72 @@
 @import url("select.css");
 @import url("admin-header.css");
 @import url("admin-navigation.css");
+@import url("admin-article.css");
+@import url("svg-styles.css");
 
 body {
     background: var(--main-bg-color);
 	margin: 0;
 }
 
-.main-container {
+.admin-main-container {
 	display: flex;
 	
 	flex-direction: column;
 	justify-content: flex-start;
 }
 
-html, body, .main-container {
+html, body, .admin-main-container {
 	height: 100%;
 }
 
-.main-page {
+.admin-main-page {
 	flex: 1 0 auto;
 	
 	display: grid;
-	grid-template-columns: 3px 4fr 3px 20fr;
+	grid-template-columns: 4fr 4px 20fr;
 	
     background: var(--color-bg);
 }
 
-.main-content > p {
+.admin-main-content {
+	display: flex;
+	flex-direction: column;
+}
+
+.admin-main-content p {
 	margin: 0px;
-	padding: 10px;
 	font-family: var(--font-family);
 	font-size: 1.2rem;
+	padding: 7px;
+}
+
+.admin-main-content h2 {
+	margin: 0px;
+	font-family: var(--font-family);
+	font-size: 1.7rem;
+	padding: 10px;
 }
 
 .simple-divider {
 	flex: 0 0 auto;
-	height: 7px;
+	height: 5px;
 	
 	background: var(--color-3);
 }
 
 .simple-vertical-divider {
-	background: var(--color-4);
+	background: var(--color-3);
 }
 
-.clear-item { //?
+.admin-description > p {
+	padding: 20px 15px 20px 15px;
+	text-align: center;
+	background: var(--color-2);
+	color: var(--color-bg);
+}
+
+.clear-item { /*?*/
 	clear: both;
 }
 

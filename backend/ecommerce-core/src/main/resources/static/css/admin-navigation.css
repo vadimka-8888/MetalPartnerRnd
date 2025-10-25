@@ -1,6 +1,6 @@
 @import("variables.css");
 
-.navigation {
+.admin-navigation {
 	display: flex;
 	flex-direction: column;
 	
@@ -8,7 +8,7 @@
 	background: var(--color-2);
 }
 
-.navigation > button {
+.admin-navigation > button {
 	flex: 0 0 auto;
 	height: 5%;
 	
@@ -20,4 +20,15 @@
 	font-family: var(--font-family);
 	font-size: 1.2rem;
 	color: var(--color-bg);
+	cursor: pointer;
+}
+
+.admin-navigation > button:hover {
+	color: var(--color-accent);
+	transition: color 0.5s;
+}
+
+.admin-navigation > .admin-nav-button-selected {
+	color: var(--color-accent);
+	font-weight: bold;
 }

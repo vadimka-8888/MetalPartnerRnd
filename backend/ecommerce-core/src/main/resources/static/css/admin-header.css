@@ -1,6 +1,6 @@
 @import url("variables.css");
 
-.header-container { 
+.admin-header-container { 
 	flex: 0 0 auto;
 
 	display: flex;
@@ -13,13 +13,13 @@
 	overflow: hidden;
 }
 
-.header-main-panel {
+.admin-header-main-panel {
 	flex: 10 1 auto;
 	
 	text-align: center;
 }
 
-.header-main-panel > h1 {
+.admin-header-main-panel > h1 {
 	height: 100%;
 	margin: 0;
 	font-family: var(--font-family);
@@ -27,11 +27,11 @@
 	align-content: center;
 }
 
-.header-role-block {
+.admin-header-role-block {
 	flex: 1 0 auto;
 }
 
-.header-role-block > div {
+.admin-header-role-block > div {
 	width: max-content;
 	height: 100%;
 	margin: auto;
