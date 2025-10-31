@@ -1,0 +1,34 @@
+<html>
+	<head>
+        <title>Price List</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" type="text/css" href="../../static/css/prices.css">
+		<meta name="description" content="Металлопрокат и другие изделия из металла с доставкой по Ростовской Области">
+	</head>
+    <body>
+		<div class="admin-pricelist-container">
+			<article id="pricelist" class="admin-pricelist">
+				<form class="admin-pricelist-frame">
+					<h2>
+						Прикрепить прайслист
+					</h2>
+					<fieldset class="admin-pricelist-file-type">
+						<legend>Тип файла</legend>
+						<label for="xl">.xl</label>
+						<input id="xl" type="radio" name="file-type" class="admin-company-info-input" />
+						<span style="padding: 25px"></span>
+						<label for="pdf">.pdf</label>
+						<input id="pdf" type="radio" name="file-type" class="admin-company-info-input" />
+					</fieldset>
+					<p>
+						<input id="pricelist-input" type="file" accept=".xl,.xlsl,.pdf" style="display: none" />
+						<label for="pricelist-input" class="admin-pricelist-button">Выбрать файл</label>
+					</p>
+					<p style="padding-bottom: 10px; margin: 0px;">
+						<button class="admin-pricelist-button" form="admin-pricelist-frame">Сохранить</button>
+					</p>
+				</form>
+			</article>
+		</div>
+	</body>
+</html>

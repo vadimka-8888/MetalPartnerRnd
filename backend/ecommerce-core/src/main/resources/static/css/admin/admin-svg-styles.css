@@ -1,0 +1,15 @@
+@import("variables.css");
+
+.tab-triangle {
+	fill: var(--color-3);
+	transition: fill 1s;
+}
+
+.tab-triangle-illuminated {
+	fill: var(--color-accent);
+	transition: fill 1s;
+}
+
+.tab-bg {
+	fill: var(--color-2);
+}

@@ -1,0 +1,41 @@
+@import url("variables.css");
+
+.admin-header-container { 
+	flex: 0 0 auto;
+
+	display: flex;
+	
+	justify-content: space-between;
+    background: var(--color-2);
+	color: var(--color-bg);
+    margin: 0;
+	height: 90px;
+	overflow: hidden;
+}
+
+.admin-header-main-panel {
+	flex: 10 1 auto;
+	
+	text-align: center;
+}
+
+.admin-header-main-panel > h1 {
+	height: 100%;
+	margin: 0;
+	font-family: var(--font-family);
+	font-size: 3.3rem;
+	align-content: center;
+}
+
+.admin-header-role-block {
+	flex: 1 0 auto;
+}
+
+.admin-header-role-block > div {
+	width: max-content;
+	height: 100%;
+	margin: auto;
+	
+	align-content: center;
+	text-align: center;
+}

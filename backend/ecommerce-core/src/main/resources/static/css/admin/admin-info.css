@@ -1,0 +1,89 @@
+@import url("admin-variables.css");
+@import url("admin-svg-styles.css");
+
+html, body {
+	height: 100%;
+}
+
+.admin-company-info-container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	
+	overflow: scroll;
+	
+	background: var(--color-bg);
+}
+
+.admin-company-info {
+	display: grid;
+	width: 30%;
+	grid-template-columns: 3fr 2fr 3fr;
+	grid-template-rows: 1fr 28px;
+	margin: 10px 0px 10px 30px;
+}
+
+.admin-company-info-frame {
+	display: block;
+	grid-column-start: 1;
+	grid-column-end: 4;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	
+	text-align: center;
+	
+	border: 4px solid var(--color-2);
+	border-radius: 10px 10px 10px 10px;
+	margin: 0px;
+}
+
+.admin-company-info-frame > h2 {
+	margin: 0;
+	padding: 10px;
+	
+	font-size: 1.7rem;
+	font-family: var(--font-family);
+}
+
+.admin-company-info-frame > p {
+	margin: 0;
+	padding: 7px;
+}
+
+.admin-company-info-tab {
+	display: block;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	
+	background: var(--color-2);
+	border-radius: 0px 0px 10px 10px;
+	text-align: center;
+}
+
+.admin-company-info-input {
+	width: 85%;
+	
+	font-size: 1.2rem;
+	font-family: var(--font-family);
+	
+	padding: 2px 2px 0px 5px;
+	border: 0px;
+	border-bottom: 1px solid var(--color-3);
+	color: var(--color-text);
+	background: var(--color-bg);
+}
+
+.admin-company-info-input:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+.admin-company-info-button {
+	width: 42%;
+	height: 30px;
+	
+	font-size: 1.2rem;
+	font-family: var(--font-family);
+}
