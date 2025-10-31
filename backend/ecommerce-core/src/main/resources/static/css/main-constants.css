@@ -1,0 +1,35 @@
+:root {
+	--font-size-1: 2.5rem;
+	--font-size-2: 2.2rem;
+	--font-size-3: 2.0rem;
+	--font-size-4: 1.7rem;
+	
+	--font-size-5: 1.4rem;
+	--font-size-6: 1.2rem;
+	--font-size-7: 1.0rem;
+	--font-size-8: 0.8rem;
+	
+	--font-size-9: 0.5rem;
+	--font-size-10: 0.3rem;
+	
+	--main-color-1: #FFFAE3;
+	--main-color-2: #2E4057;
+	--main-color-3: #AA4465;
+	--main-color-image-1: #74A9D1;
+	--main-color-image-2: #B8DEF6;
+	--main-color-image-3: #77ADD1;
+}
+
+.roboto-mono-normal {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-mono-bold {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}

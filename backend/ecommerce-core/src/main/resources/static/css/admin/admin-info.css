@@ -1,5 +1,5 @@
-@import url("variables.css");
-@import url("svg-styles.css");
+@import url("admin-variables.css");
+@import url("admin-svg-styles.css");
 
 html, body {
 	height: 100%;
