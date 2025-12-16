@@ -1,0 +1,10 @@
+<!DOCTYPE apsectj PUBLIC "-//AspectJ//DTD//EN" "https://www.eclips.org/aspectj/dtd/aspectj.dtd">
+<aspectj>
+    <weaver>
+        <include within="ru.metal_partner_rnd..*" />
+    </weaver>
+
+    <aspects>
+        <aspect name="ru.metal_partner_rnd.aspects.LoggingAspect" />
+    </aspects>
+</aspectj>

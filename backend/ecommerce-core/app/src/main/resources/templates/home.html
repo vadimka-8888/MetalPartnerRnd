@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://thymeleaf.org">
+	<head>
+        <title>Metal Partner</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" type="text/css" href="../css/home.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">
+		<meta name="description" content="Металлопрокат и другие изделия из металла с доставкой по Ростовской Области">
+		<script src="../js/home.js"></script>
+	</head>
+    <body>
+		<div>
+			<div id="cropped-image"></div>
+			<header id="main-panel">
+				<div id="info-container">
+					<div class="main-info theme-info">
+						<div class="icon">
+							<img src="../icons/icons8-country-50.png"/>
+						</div>
+						<div class="roboto-mono-normal">
+							<p>г. Ростов-на-Дону,<p>
+							<p>просп. Будённовский 80,<p>
+							<p>оф. 310<p>
+						</div>
+					</div>
+					<div id="main-logo">
+						<img src="../images/logo.png"/>
+					</div>
+					<div class="main-info theme-info">
+						<div class="icon">
+							<img src="../icons/icons8-ringer-volume-50.png"/>
+						</div>
+						<div class="roboto-mono-normal">
+							<p th:text="${email}">........<p> 
+							<p th:text="${phone}">........<p>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div id="nav-wrap">
+				<div id="nav-container">
+					<nav id="top-nav" class="theme-nav">
+						<div id="button-container">
+							<a href="../section/metal_roof" class="button button-nav-top theme-nav-button roboto-mono-bold">Металлочерепица</a>
+							<a href="../section/metal_products" class="button button-nav-top theme-nav-button roboto-mono-bold">Металлопрокат</a>
+							<a href="../section/metalworking" class="button button-nav-top theme-nav-button roboto-mono-bold">Металообработка и изделия</a>
+							<a href="../section/delivery" class="button button-nav-top theme-nav-button roboto-mono-bold">Доставка</a>
+						</div>
+					</nav>
+					<div id="nav-divider"></div>
+					<nav id="bottom-nav" class="theme-nav">
+						<a href="../section/delivery" id="button-nav-bottom" class="button roboto-mono-bold">О компании</a>
+					</nav>
+				</div>
+			</div>
+			<div id="bottom-divider" class="theme-panel"></div>
+		</div>
+	</body>
+</html>

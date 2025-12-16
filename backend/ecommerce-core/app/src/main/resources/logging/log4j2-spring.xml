@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration xmlns="https://logging.apache.org/xml/ns"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="
+                   https://logging.apache.org/xml/ns
+                   https://logging.apache.org/xml/ns/log4j-config-2.xsd"
+            status="ERROR" monitorInterval="30">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY" />
+            <JsonTemplateLayout eventTemplateUri="classpath:${sys:logging.layoutFileName}"/>
+        </Console>
+
+        <File name="File" fileName="${sys:logging.logFileName.general}.log">
+            <JsonTemplateLayout eventTemplateUri="classpath:${sys:logging.layoutFileName}"/>
+        </File>
+
+        <File name="BuisnessLogicFile" fileName="${sys:logging.logFileName.buisness}.log">
+            <JsonTemplateLayout eventTemplateUri="classpath:${sys:logging.layoutFileName}"/>
+        </File>
+
+        <!-- <RollingFile name="BuisnessLogicFile" fileName="${sys:logging.logFileName.buisness}.log" filePattern="${sys:logging.logFileName.buisness}-%d{dd-MM-yyyy}-%i.log" filePermissions="rw-rw-r-/-">
+            <JsonTemplateLayout eventTemplateUri="classpath:${sys:logging.layoutFileName}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" />
+            </Policies>
+            <DefaultRolloverStrategy max="10" />
+        </RollingFile> -->
+    </Appenders>
+
+    <Loggers>
+        <Logger name="ru.metal_partner_rnd" level="INFO" additivity="true">
+            <AppenderRef ref="BuisnessLogicFile" />
+        </Logger>
+
+        <Logger name="org.springframework" level="ERROR" additivity="true">
+            <AppenderRef ref="File" />
+        </Logger>
+
+        <Logger name="org.apache" level="ERROR" additivity="true">
+            <AppenderRef ref="File" />
+        </Logger>
+
+        <!-- Root Logger -->
+        <Root level="ERROR">
+            <AppenderRef ref="Console" />
+        </Root>
+    </Loggers>
+
+</Configuration>
