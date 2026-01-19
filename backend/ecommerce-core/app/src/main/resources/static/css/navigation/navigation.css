@@ -6,8 +6,9 @@
 	
 	height: 5%;
 	width: 100%;
+	overflow: hidden;
 	
-	background: var(--main-color-2);
+	background: var(--color-image-1);
 	
 	transform: scale(1, 1);
 	transition:

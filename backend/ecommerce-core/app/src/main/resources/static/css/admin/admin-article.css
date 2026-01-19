@@ -1,4 +1,4 @@
-@import("variables.css");
+@import("admin-variables.css");
 
 .admin-articles-container {
 	display: flex;

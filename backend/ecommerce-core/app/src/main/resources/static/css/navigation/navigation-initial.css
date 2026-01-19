@@ -1,16 +1,48 @@
 
 #nav-wrap {
 	position: absolute;
+	display: flex;
 	top: 10%;
 	left: 0px;
+	z-index: 1;
 	
 	height: 90%;
 	width: 100%;
 }
 
+#main-col-1 {
+	display: block;
+	flex: 6 0 0;
+	height: 100%;
+}
+
+#main-col-2 {
+	display: block;
+	flex: 32 0 0;
+	height: 100%;
+}
+
+#main-col-3 {
+	display: block;
+	flex: 6 0 0;
+	height: 100%;
+}
+
+#main-col-4 {
+	display: block;
+	flex: 50 0 0;
+	height: 100%;
+}
+
+#main-col-5 {
+	display: block;
+	flex: 6 0 0;
+	height: 100%;
+}
+
 #nav-container {
 	display: flex;
-	width: 26%;
+	width: 100%;
 	height: 100%;
 	margin: auto;
 	
@@ -21,34 +53,29 @@
 }
 	
 #top-nav {
-	flex-grow: 0.564;
-	border-radius: 0px 0px 50px 50px;
+	flex-grow: 0.8; /*0.8*/
+	border-radius: 0px 0px 20px 20px;
 }
 
-#bottom-nav {
-	flex-grow: 0.116;
-	border-radius: 50px 50px 0px 0px;
-}
-
-#nav-divider {
-	flex: 0.318 0 auto;
+#nav-bottom-space {
+	flex: 0.2 0 auto;
 	height: 1px;
 }
 
 #bottom-nav:hover {
-	outline: 3px solid var(--main-color-3);
+	outline: 3px solid var(--color-main);
 	
 	transition: 
 		outline 0.05s;
 }
 
-#top-nav, #bottom-nav {
+#top-nav {
 	flex-shrink: 1;
 	flex-basis: auto;
 	height: 0px;
 	width: 100%;
 	
-	background: var(--main-color-2);
+	background: var(--color-image-1);
 	
 	transition: flex-grow 1.1s ease-out;
 	
@@ -56,16 +83,3 @@
 		flex-grow: 0;
 	}
 }
-/*
-#main-logo {
-	position: absolute;
-	top: -12.5%;
-	left: 42%;
-	width: 16%;
-	z-index: 1;
-}
-
-#main-logo > img {
-	width: 100%;
-}
-*/

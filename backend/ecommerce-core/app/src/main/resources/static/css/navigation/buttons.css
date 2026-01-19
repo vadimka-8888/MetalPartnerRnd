@@ -1,11 +1,32 @@
-.button {
+.button-nav {
 	display: block;
 	opacity: 1.0;
 	
+	width: 95%;
+	height: 80%;
+	min-width: 0;
+	min-height: 0;
+	background: var(--color-main);
+	color: var(--color-text);
+	
 	text-align: center;
 	align-content: center;
+	overflow: hidden;
+	text-wrap: nowrap;
 	
 	border-radius: 2px;
+	
+	transition: 
+		box-shadow 0.2s,
+		width 0.2s,
+		height 0.4s cubic-bezier(0.78, 0.15, 0.28, 0.85) 0.2s,
+		color 0.3s linear 0.5s,
+		font-size 0.2s linear;
+		
+	@starting-style {
+		height: 0%;
+		color: rgb(1 1 1 / 0.0);
+	}
 }
 
 .button[disabled] {
@@ -19,33 +40,24 @@
 	align-items: center;
 	justify-items: center;
 	
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 	grid-template-rows: 1fr;
 }
 
-.button-nav {
-	width: 90%;
-	height: 77%;
+.short {
 	
-	background: var(--main-color-1);
-	color: var(--main-color-2);
+}
+
+.long {
 	
-	font-size: var(--font-size-4);
+}
+
+.longest {
 	
-	transition: 
-		box-shadow 0.2s,
-		width 0.2s,
-		height 0.4s cubic-bezier(0.78, 0.15, 0.28, 0.85) 0.2s,
-		color 0.3s linear 0.5s;
-		
-	@starting-style {
-		height: 0%;
-		color: rgb(1 1 1 / 0.0);
-	}
 }
 
 .button-nav:hover {
-	box-shadow: 4px -4px 0px var(--main-color-3);
+	box-shadow: 4px -4px 0px var(--color-main);
 	width: 94%;
 	
 	transition: 
@@ -54,6 +66,11 @@
 }
 
 .active {
-	background: var(--main-color-3);
-	color: var(--main-color-1);
+	background: var(--color-main);
+	color: var(--color-text);
+}
+
+.label {
+	transition: 
+		font-size 0.2s linear;
 }

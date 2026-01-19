@@ -22,9 +22,17 @@
 }
 
 #main-logo {
-	flex: 0 0 32%;
+	flex: 0 0 44%;
 	display: block;
 	text-align: center;
+}
+
+#main-logo > img {
+	position: relative;
+	top: 50%;
+	height: 100%;
+	transform: scale(1.5, 1.5);
+	opacity: 1.0;
 	
 	transition: 
 		transform 0.7s ease-out,
@@ -36,33 +44,26 @@
 	}
 }
 
-#main-logo > img {
-	position: relative;
-	top: 0%;
-	height: 100%;
-	opacity: 1.0;
-}
-
 #info-container {
+	flex: 0 0 50%;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
 	
-	width: 100%;
+	width: 55%;
 	height: 100%;
-	margin: 0;
+	margin: 0 0% 0 0;
 }
 
 .main-info {
-	flex: 0 0 18%;
+	flex: 0 0 auto;
 	display: grid;
 	height: 100%;
 	
-	grid-template-columns: 1fr minmax(0, 3fr);
+	grid-template-columns: 1fr 3fr;
 	grid-template-rows: 100%;
-	gap: 5px;
-	justify-items: center;
-	align-items: center;
+	gap: 7px;
+	justify-content: space-between;
 	
 	overflow: hidden;
 	
@@ -78,26 +79,26 @@
 	}
 }
 
-.main-info .label {
-	overflow: hidden; 
-	width: 100%; 
-	height: 100%;
+.main-info > div:last-child {
+	width: 100%;
 	
 	text-align: center;
 	align-content: center;
-	text-wrap: nowrap;
+}
+
+#main-panel-free-space {
+	flex: 0 0 6%;
 }
 
 .icon {
-	width: fit-content;
 	text-align: center;
 	align-content: center;
-	
-	transition: 
-		transform 0.5s ease-out;
 }
 
-/*
+.icon > img {
+	
+}
+
 @media (width >= 1100px) and (height >= 550px) {
 	#info-container {
 		font-size: var(--font-size-8);
@@ -108,7 +109,7 @@
 	}
 	
 	#main-logo > img {
-		transform: scale(1.0, 1.0);
+		transform: scale(1.35, 1.35);
 	}
 }
 
@@ -122,7 +123,7 @@
 	}
 	
 	#main-logo > img {
-		transform: scale(1.0, 1.0);
+		transform: scale(1.35, 1.35);
 	}
 }
 
@@ -136,7 +137,7 @@
 	}
 	
 	#main-logo > img {
-		transform: scale(1.0, 1.0);
+		transform: scale(1.38, 1.38);
 	}
 }
 
@@ -150,7 +151,7 @@
 	}
 	
 	#main-logo > img {
-		transform: scale(1.0, 1.0);
+		transform: scale(1.45, 1.45);
 	}
 }
 
@@ -164,7 +165,7 @@
 	}
 	
 	#main-logo > img {
-		transform: scale(1.0, 1.0);
+		transform: scale(1.5, 1.5);
 	}
 }
 
@@ -178,7 +179,7 @@
 	}
 	
 	#main-logo > img {
-		transform: scale(1.0, 1.0);
+		transform: scale(1.55, 1.55);
 	}
 }
 
@@ -192,7 +193,7 @@
 	}
 	
 	#main-logo > img {
-		transform: scale(1.0, 1.0);
+		transform: scale(1.6, 1.6);
 	}
 }
 
@@ -206,7 +207,7 @@
 	}
 	
 	#main-logo > img {
-		transform: scale(1.0, 1.0);
+		transform: scale(1.65, 1.65);
 	}
 }
 
@@ -220,8 +221,6 @@
 	}
 	
 	#main-logo > img {
-		transform: scale(1.0, 1.0);
+		transform: scale(1.7, 1.7);
 	}
 }
-
-*/
