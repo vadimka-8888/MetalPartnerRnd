@@ -13,14 +13,26 @@
 	--font-size-10: 0.3rem;
 	
 	--color-main: #EA2B1F;
-	--color-text: #F5F5F5;
-	--color-background: #F5F5F5;
+	--color-secondary: #7D6B91;
+	--color-header-text: #F5F5F5;
+	--color-main-text: #111111;;
+	--color-background: #FCFCFC;
+	--color-card-background: #FCFCFC;
+	--color-icons: #EA2B1F;
+	--color-button: #EA2B1F;
+	--color-button-text: #FCFCFC;
+	--color-button-border: #111111;;
+	--color-button-highlight: #F8B7B4;
+
 	--color-image-1: #111111;
 	--color-image-2: #383836;
 	--color-image-2-highlighted: #484846;
 	--color-image-3: #8D8D8D;
-}
 
+
+	--header-size: calc(14vh - (1800px - 100vw) * 0.0385);
+	--header-navigation-proportion: 34%;
+}
 
 .rfs-1 {
 	font-size: 1.0rem;

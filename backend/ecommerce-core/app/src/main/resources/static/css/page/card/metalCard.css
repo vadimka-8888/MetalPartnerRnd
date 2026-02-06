@@ -1,0 +1,41 @@
+@import url("card.css");
+
+.product-card {
+
+}
+
+.product-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    height: 96%;
+    width: 100%;
+
+    padding: 2% 0px 2% 0px;
+
+    .product {
+        display: flex;
+        flex-direction: row;
+
+        width: auto;
+        height: min-content;
+
+        justify-content: start;
+        align-items: center;
+
+        margin: 2px 0px 2px 22px;
+
+        img {
+            width: 5%;
+        }
+
+        p {
+            flex: 0 0 auto;
+        }
+
+        .product-divider {
+            width: 5%;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+.reference:hover {
+    color: var(--color-button-highlight);
+}
+
+.reference {
+    color: var(--color-header-text);
+    text-decoration: none;
+}

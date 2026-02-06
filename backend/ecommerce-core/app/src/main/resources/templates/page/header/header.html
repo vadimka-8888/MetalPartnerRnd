@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://thymeleaf.org">
+	<head>
+		<title>Metal Partner</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="../../../static/css/page/header/header.css">
+        <link rel="stylesheet" type="text/css" href="../../../static/css/page/page.css">
+        <link rel="stylesheet" type="text/css" href="../../../static/css/page/button/button.css">
+	</head>
+    <body>
+    	<div id="page-header">
+			<header id="header" th:class="${headerState}" th:fragment="header">
+				<div id="main-panel">
+					<div id="info-container" class="roboto-mono-normal">
+						<div class="main-info">
+							<div class="icon">
+								<img src="../../../static/icons/icons8-country-72.png" th:src="@{/icons/icons8-country-72.png}"/>
+							</div>
+							<div class="label">
+								<div class="rfs-10 var1">
+									<p>г. Ростов-на-Дону</p>
+									<p>просп. Будённовский 80</p>
+									<p>оф. 310</p>
+								</div>
+								<div class="rfs-9 var2">
+									<p>г. Ростов-на-Дону</p>
+								</div>
+								<div class="rfs-9 var3">
+									<p>г. Ростов-на-Дону</p>
+								</div>
+							</div>
+						</div>
+						<div id="main-logo">
+							<img src="../../../static/images/logo.png" th:src="@{/images/logo.png}"/>
+						</div>
+						<div class="main-info">
+							<div class="icon">
+								<img src="../../../static/icons/icons8-ringer-volume-72.png" th:src="@{/icons/icons8-ringer-volume-72.png}"/>
+							</div>
+							<div class="label">
+								<div class="rfs-10 var1">
+									<p th:text="${email}">lalalalala-whatever@mail.ru</p>
+									<p th:text="${phone}">+7-899-908-09-09</p>
+								</div> 
+								<div class="rfs-9 var2">
+									<p th:text="${phone}">+7-899-908-09-09</p>
+								</div>
+								<div class="rfs-9 var3">
+									<p th:text="${phone}">+7-899-908-09-09</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<nav id="navigation" data-current-active="tab1">
+					<div id="nav-container">
+						<a th:href="@{/section/about}" id="tab1" class="button nav roboto-mono-bold active">
+							<p class="rfs-8">О компании</p>
+						</a>
+						<a th:href="@{/section/metal}" id="tab2" class="button nav roboto-mono-bold">
+							<p class="rfs-8">Металлопрокат</p>
+						</a>
+						<a th:href="@{/section/embeddedparts}" id="tab3" class="button nav roboto-mono-bold">
+							<p class="rfs-8 var1">Закладные детали</p>
+							<p class="rfs-7 var2">Детали</p>
+							<p class="rfs-67 var3">Детали</p>
+						</a>
+						<a th:href="@{/section/service}" id="tab4" class="button nav roboto-mono-bold">
+							<p class="rfs-8 var1">Услуги резки и гибки</p>
+							<p class="rfs-7 var2">Резка и гибка</p>
+							<p class="rfs-7 var3">Услуги</p>
+						</a>
+						<a th:href="@{/section/delivery}" id="tab5" class="button nav roboto-mono-bold">
+							<p class="rfs-8 var1">Доставка и оплата</p>
+							<p class="rfs-7 var2">Доставка</p>
+							<p class="rfs-7 var3">Доставка</p>
+						</a>
+						<a th:href="@{/section/pricelist}" id="tab6" class="button nav roboto-mono-bold">
+							<p class="rfs-8">Прайслист</p>
+						</a>
+					</div>
+				</nav>
+			</header>
+		</div>
+		<div id="content-page" th:text="${mainText}">
+			<div id="dev">Ok</div>
+		</div>
+	</body>
+</html>

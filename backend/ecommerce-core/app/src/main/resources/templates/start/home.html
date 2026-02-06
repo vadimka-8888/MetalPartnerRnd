@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://thymeleaf.org">
+	<head>
+        <title>Metal Partner</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">
+		<meta name="description" content="Металлопрокат и другие изделия из металла с доставкой по Ростовской Области">
+
+		<link rel="stylesheet" type="text/css" th:href="@{'/css/main-constants.css'}">
+		<link rel="stylesheet" type="text/css" th:href="@{'/css/text/text.css'}">
+
+		<link rel="stylesheet" type="text/css" th:href="@{'/css/start/home.css'}">
+        <link rel="stylesheet" type="text/css" th:href="@{'/css/start/header/header.css'}">
+        <link rel="stylesheet" type="text/css" th:href="@{'/css/start/header/navigation.css'}">
+        <link rel="stylesheet" type="text/css" th:href="@{'/css/start/header/buttons.css'}">
+
+		<!-- <link th:each="stylesheet : ${css}" rel="stylesheet" type="text/css" th:href="|css/${prefix}/${stylesheet}.css|"> -->
+		<script th:each="script : ${js}" th:src="|js/${script}.js|"></script>
+	</head>
+    <body>
+		<div>
+			<div id="cropped-image"></div>
+			<header id="main-panel">
+				<div id="main-logo">
+					<img class="logo" src="images/logo.png"/>
+				</div>
+				<div id="info-container" class="roboto-mono-normal">
+					<div class="main-info">
+						<div class="icon">
+							<img src="icons/icons8-country-72.png"/>
+						</div>
+						<div class="label multivariant var2">
+							<div class="rfs-12">
+								<p>г. Ростов-на-Дону</p>
+								<p>просп. Будённовский 80</p>
+								<p>оф. 310</p>
+							</div>
+							<div hidden class="rfs-8">
+								<p>г. Ростов-на-Дону</p>
+							</div>
+						</div>
+					</div>
+					<div class="main-info">
+						<div class="icon">
+							<img src="icons/icons8-ringer-volume-72.png"/>
+						</div>
+						<div class="label multivariant var2">
+							<div class="rfs-12">
+								<p th:text="${email}">...</p>
+								<p th:text="${phone}">...</p>
+							</div> 
+							<div hidden class="rfs-8">
+								<p th:text="${phone}">...</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="main-panel-free-space"></div>
+			</header>
+			<div id="nav-wrap">
+				<div id="main-col-1"></div>
+				<div id="main-col-2">
+					<div id="nav-container">
+						<nav id="top-nav" class="theme-nav">
+							<div id="button-container">
+								<a href="section/metal" class="button-nav-top button roboto-mono-bold">
+									<p class="rfs-3">Металлопрокат</p>
+								</a>
+								<a href="section/embeddedparts" class="button-nav-top button multivariant var2 roboto-mono-bold">
+									<p class="rfs-5">Закладные детали</p>
+									<p hidden class="rfs-3">Детали</p>
+								</a>
+								<a href="section/service" class="button-nav-top button multivariant var3 roboto-mono-bold">
+									<p class="rfs-6">Услуги резки и гибки</p>
+									<p hidden class="rfs-4">Резка и гибка</p>
+									<p hidden class="rfs-3">Услуги</p>
+								</a>
+								<a href="section/delivery" class="button-nav-top button multivariant var2 roboto-mono-bold">
+									<p class="rfs-5">Доставка и оплата</p>
+									<p hidden class="rfs-3">Доставка</p>
+								</a>
+								<a href="section/pricelist" class="button-nav-top button roboto-mono-bold">
+									<p class="rfs-3">Прайслист</p>
+								</a>
+							</div>
+						</nav>
+						<div id="nav-bottom-space"></div>
+					</div>
+				</div>
+				<div id="main-col-3"></div>
+				<div id="main-col-4">
+					<a href="section/about"  id="special-button" class="button rfs-3 roboto-mono-bold">О компании</a>
+					<!--<div id="dev" style="width: 30%; height: 20%; margin: auto; color: black; font-size: 2rem; align-content: center; text-align: center"></div> -->
+				</div>
+				<div id="main-col-5"></div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://thymeleaf.org">
+    <head>
+        <title>Metal Partner</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="../../../static/css/page/footer/footer.css">
+        <link rel="stylesheet" type="text/css" href="../../../static/css/page/page.css">
+        <link rel="stylesheet" type="text/css" href="../../../static/css/page/button/button.css">
+        <link rel="stylesheet" type="text/css" href="../../../static/css/text/text.css">
+    </head>
+    <body>
+        <div id="page-main">
+            <div id="page-main-scroll">
+                <div id="page-footer">
+                    <div id="footer" class="roboto-mono-normal" th:fragment="footer">
+                        <div id="main-footer-container">
+                            <div class="footer-info-container">
+                                <div id="footer-logo">
+                                    <img src="../../../static/images/logo.png" th:src="@{/images/logo.png}"/>
+                                </div>
+                            </div>
+                            <div class="footer-info-container narrow">
+                                <a th:href="@{/section/about}" class="rfs-11 reference">О компании</a>
+                                <a th:href="@{/section/metal}" class="rfs-11 reference">Металлопрокат</a>
+                                <a th:href="@{/section/service}" class="rfs-11 reference">Услуги</a>
+                            </div>
+                            <div class="footer-info-container narrow">
+                                <a th:href="@{/section/delivery}" class="rfs-11 reference var1">Оплата и доставка</a>
+                                <a th:href="@{/section/delivery}" class="rfs-11 reference var2">Доставка</a>
+                                <a th:href="@{/section/delivery}" class="rfs-11 reference var3">Доставка</a>
+                                <a th:href="@{/section/pricelist}" class="rfs-11 reference">Прайслист</a>
+                                <a th:href="@{/section/about}" class="rfs-11 reference">Авторства</a>
+                            </div>
+                            <div class="footer-info-container">
+                                <label class="button">
+                                    <p class="rfs-8 roboto-mono-bold">Связаться в нами</p>
+                                </label>
+                                <p id="footer-email" class="rfs-10 var1" th:text="${email}">katerina-avangardservice@mail.ru</p>
+                                <p id="footer-email" class="rfs-10 var2" th:text="${email}">katerina@mail.ru</p>
+                                <p id="footer-email" class="rfs-10 var3" th:text="${email}">...</p>
+                            </div>
+                        </div>
+                        <div id="footer-company-name">
+                            <p class="rfs-11">2026</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

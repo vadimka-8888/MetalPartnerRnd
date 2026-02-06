@@ -1,0 +1,16 @@
+@import url(card/serviceCard.css);
+
+#description {
+    desplay: block;
+
+    width: 96%;
+    height: min-content;
+
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 20px;
+}
+
+#catalog {
+    grid-row-gap: 60px;
+}

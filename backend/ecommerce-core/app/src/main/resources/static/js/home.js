@@ -2,16 +2,18 @@ const maxWidth = window.screen.availWidth;
 const maxHeight = window.screen.availHeight;
 
 window.addEventListener("DOMContentLoaded", function() {
-	window.addEventListener("resize", onDimentionsChanged);
+	//window.addEventListener("resize", onDimentionsChanged);
 	
 	start();
 });
 
+
+//not used
 function onDimentionsChanged() {
 	let viewportWidth = window.innerWidth;
 	let viewportHeight = window.innerHeight;
-	document.querySelector("#dev").textContent = `Viewport width is ${viewportWidth}px, height is ${viewportHeight}px`;
-	console.log(`Viewport width is ${viewportWidth}px, height is ${viewportHeight}px`);
+	//document.querySelector("#dev").textContent = `Viewport width is ${viewportWidth}px, height is ${viewportHeight}px`;
+	//console.log(`Viewport width is ${viewportWidth}px, height is ${viewportHeight}px`);
 	if (window.matchMedia("(height <= 450px)").matches) {
 		let info = document.querySelectorAll(".main-info");
 		for (let i of info) {
@@ -25,7 +27,7 @@ function start() {
 	let imageFrame = document.querySelector('#cropped-image');
 	let mainImage = document.createElement("img");
 	
-	mainImage.src = "../static/images/254856220_l.jpg";
+	mainImage.src = "../images/254856220_l.jpg";
 	mainImage.className = "hidden-image";
 	mainImage.width = maxWidth;
 	mainImage.onload = function() {
@@ -35,6 +37,8 @@ function start() {
 	imageFrame.append(mainImage);
 }
 
+
+//not used
 function simplifyTextBlock(textBlock, lineToLeaveUnmodified = 0) {
 	let allLines = textBlock.children;
 	for (let i = 0; i < allLines.length; i++) {

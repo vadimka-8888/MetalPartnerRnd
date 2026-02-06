@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://thymeleaf.org">
+    <head>
+        <title>Metal Partner</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="../../../static/css/page/card/metalCard.css">
+        <link rel="stylesheet" type="text/css" href="../../../static/css/page/page.css">
+        <link rel="stylesheet" type="text/css" href="../../../static/css/page/button/button.css">
+        <link rel="stylesheet" type="text/css" href="../../../static/css/text/text.css">
+    </head>
+    <body>
+        <article th:each="x : ${myObjects}" class="card-wrap roboto-mono-normal" th:fragment="product-card">
+            <div class="card product-card">
+                <div class="card-table">
+                    <img class="card-divider" src="../../../static/svg/cardLine.svg" th:src="@{/svg/cardLine.svg}" />
+                    <div class="title">
+                        <p class="rfs-5 card-var1">Сортовой прокат</p>
+                        <p class="rfs-7 card-var2">Сортовой прокат</p>
+                        <p class="rfs-9 card-var3">Сортовой прокат</p>
+                    </div>
+                    <img class="card-divider" src="../../../static/svg/cardLineSmall.svg" th:src="@{/svg/cardLineSmall.svg}" />
+                    <div class="product-list">
+                        <div class="product">
+                            <img src="../../../static/svg/list-icon.svg" th:src="@{/svg/list-icon.svg}" />
+                            <div class="product-divider"></div>
+                            <p class="name rfs-11">Арматура</p>
+                        </div>
+                        <div class="product">
+                            <img src="../../../static/svg/list-icon.svg" th:src="@{/svg/list-icon.svg}" />
+                            <div class="product-divider"></div>
+                            <p class="name rfs-11">Катанка</p>
+                        </div>
+                        <div class="product">
+                            <img src="../../../static/svg/list-icon.svg" th:src="@{/svg/list-icon.svg}" />
+                            <div class="product-divider"></div>
+                            <p class="name rfs-11">Круг</p>
+                        </div>
+                        <div class="product">
+                            <img src="../../../static/svg/list-icon.svg" th:src="@{/svg/list-icon.svg}" />
+                            <div class="product-divider"></div>
+                            <p class="name rfs-11">Проволока</p>
+                        </div>
+                        <div class="product">
+                            <img src="../../../static/svg/list-icon.svg" th:src="@{/svg/list-icon.svg}" />
+                            <div class="product-divider"></div>
+                            <p class="name rfs-11">Квадрат</p>
+                        </div>
+                        <div class="product">
+                            <img src="../../../static/svg/list-icon.svg" th:src="@{/svg/list-icon.svg}" />
+                            <div class="product-divider"></div>
+                            <p class="name rfs-11">Шестиугольник</p>
+                        </div>
+                    </div>
+
+                    <img class="card-divider" src="../../../static/svg/cardLine.svg" th:src="@{/svg/cardLine.svg}" />
+                </div>
+            </div>
+        </article>
+    </body>
+</html>

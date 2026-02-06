@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://thymeleaf.org">
+    <head>
+        <title>Metal Partner</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="css/page/embeddedpartsContent.css">
+        <link rel="stylesheet" type="text/css" href="css/page/page.css">
+    </head>
+    <body>
+        <div id="content" class="roboto-mono-normal" th:fragment="content">
+            <h2 class="rfs-1">Закладные детали</h2>
+            <div id="description" class="rfs-8">
+                <p>Закладные детали — это основа монолитного строительства и промышленного монтажа. От их точности и качества напрямую зависит прочность и долговечность всей конструкции. Наше производство специализируется на изготовлении закладных деталей любой сложности в строгом соответствии с вашими чертежами и техническими заданиями.</p>
+
+                <ul>Наши ключевые принципы:
+
+                <li>Точность до <strong>миллиметра</strong>: Мы работаем по предоставленным вами чертежам (эскизам, 3D-моделям, спецификациям). Используем современное оборудование для плазменной и газовой резки, гибки и сварки, что гарантирует полное соответствие заданным параметрам.</li>
+
+                <li>Широкий спектр <strong>возможностей</strong>: Изготавливаем детали из черного и оцинкованного металла, нержавеющих сталей. Производим как типовые изделия (пластины с анкерами), так и сложные сборочные узлы с несколькими элементами.</li>
+
+                <li>Полный цикл работ: Резка, гибка, механическая обработка, промышленная сварка (ручная, аргонодуговая), пескоструйная обработка, антикоррозийное покрытие (грунтовка, окраска) — всё на одной производственной площадке.</li>
+
+                <li>Контроль <strong>качества</strong>: Каждая партия проходит поэтапный контроль: соответствие геометрии, качество сварных швов, прочность крепления анкеров.</li>
+            </div>
+            <div id="catalog">
+                <div th:replace="~{page/card/embeddedpartsCard :: embedded-part-card}"></div>
+            </div>
+        </div>
+    </body>
+</html>

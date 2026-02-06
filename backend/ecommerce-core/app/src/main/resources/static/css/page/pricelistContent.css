@@ -1,0 +1,39 @@
+
+.article {
+    display: block;
+
+    width: 98%;
+    height: min-content;
+
+    padding-bottom: 10px;
+    margin: auto;
+
+    text-align: center;
+
+    text-wrap: wrap;
+}
+
+.article > p {
+    width: 100%;
+}
+
+.pricelist-button {
+    display: block;
+
+    width: min-content;
+    height: min-content;
+
+    padding: 7px;
+    margin: auto;
+
+    text-wrap: nowrap;
+}
+
+.pricelist-section {
+    display: block;
+
+    width: 98%;
+    height: max-content;
+
+    padding: 2% 0% 2% 0%;
+}
