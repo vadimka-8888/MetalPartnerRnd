@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://thymeleaf.org">
+    <head>
+        <title>Metal Partner</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="../../../static/css/page/card/embeddedpartsCard.css">
+        <link rel="stylesheet" type="text/css" href="../../../static/css/page/page.css">
+
+        <script src="js/adaptor.js"></script>
+    </head>
+    <body>
+        <article th:each="x : ${myObjects}" class="card-wrap roboto-mono-normal" th:fragment="embedded-part-card">
+            <div class="card card-with-picture emparts-card">
+                <div class="card-table">
+                    <img class="card-divider" src="../../../static/svg/cardLine.svg" th:src="@{/svg/cardLine.svg}" />
+                    <div class="card-picture">
+                        <img />
+                    </div>
+                    <img class="card-divider" src="../../../static/svg/cardLine.svg" th:src="@{/svg/cardLine.svg}" />
+                    <div class="title rfs-2">MN-401-1</div>
+                    <img class="card-divider" src="../../../static/svg/cardLineSmall.svg" th:src="@{/svg/cardLineSmall.svg}" />
+                    <div class="button-container">
+                        <label class="button card-order rfs-8">
+                            <p>Сделать заказ</p>
+                        </label>
+                    </div>
+
+                   <img class="card-divider" src="../../../static/svg/cardLine.svg" th:src="@{/svg/cardLine.svg}" />
+                </div>
+            </div>
+        </article>
+    </body>
+</html>

@@ -15,6 +15,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.ArrayList;
 
 import java.io.IOException;
 
@@ -22,6 +23,14 @@ import java.io.IOException;
 public class LoggingAspect {
 
     static final Logger logger = LogManager.getLogger(LoggingAspect.class.getName());
+
+    //main loggers
+
+    @Around("execution(* ru.metal_partner_rnd.ecommerce_core.services.StartupService.start(..))")
+    public void applicationReadyLog(ProceedingJoinPoint joinPoint) throws Throwable {
+        logger.info("Application context is ready");
+        joinPoint.proceed();
+    }
     
     @Around("execution(public String ru.metal_partner_rnd.ecommerce_core.controllers.*.page*(..))")
     public Object controllerLog(ProceedingJoinPoint joinPoint) throws Throwable {
@@ -33,16 +42,7 @@ public class LoggingAspect {
         return returnedView;
     }
 
-    @Around("execution(String[] ru.metal_partner_rnd.ecommerce_core.utils.PageTextLoader.loadPageText(String))")
-    public String[] logTextLoading(ProceedingJoinPoint joinPoint) throws Throwable {
-        String[] result = (String[]) joinPoint.proceed();
-        if (result[0] != null) {
-            logger.info(result[0]);
-        } else {
-            logger.info("A text for a page was successfully loaded");
-        }
-        return result;
-    }
+    //auxiliary loggers
 
     @Around("call(boolean java.util.Map.containsKey(Object)) && cflow(execution(String ru.metal_partner_rnd.ecommerce_core.controllers.*.getTextForPage(..)))")
     public boolean logCache(ProceedingJoinPoint joinPoint) throws Throwable {
@@ -56,10 +56,21 @@ public class LoggingAspect {
         return result;
     }
 
-    @Around("call(boolean java.util.Map.containsKey(Object))")
-    public boolean test(ProceedingJoinPoint joinPoint) throws Throwable {
-        boolean result = (boolean) joinPoint.proceed();
-        logger.info("This function WORKS!");
+    @Around("execution(String[] ru.metal_partner_rnd.ecommerce_core.utils.PageTextLoader.loadPageText(String))")
+    public String[] logTextLoading(ProceedingJoinPoint joinPoint) throws Throwable {
+        String[] result = (String[]) joinPoint.proceed();
+        if (result[0] != null) {
+            logger.info(result[0]);
+        } else {
+            logger.info("A text for a page was successfully loaded");
+        }
+        return result;
+    }
+
+    @Around("execution(* ru.metal_partner_rnd.ecommerce_core.utils.GeneralSupporter.getCss(..))")
+    public ArrayList<String> logCss(ProceedingJoinPoint joinPoint) throws Throwable {
+        ArrayList<String> result = (ArrayList<String>) joinPoint.proceed();
+        logger.info("Css files for a page: \'{}\'", result);
         return result;
     }
 
@@ -71,13 +82,6 @@ public class LoggingAspect {
     //     logger.info(resultingMessage.toString());
     //     return result;
     // }
-
-    @Around("execution(* ru.metal_partner_rnd.ecommerce_core.services.StartupService.start(..))")
-    public void applicationReadyLog(ProceedingJoinPoint joinPoint) throws Throwable {
-        System.out.println("logger: ok");
-        logger.info("Application context is ready");
-        joinPoint.proceed();
-    }
 
     // @Around("execution(* ru.metal_partner_rnd.ecommerce_core.mointors.*.monitor(..))")
     // public Map<String, Long> monitorLog(ProceedingJoinPoint joinPoint) throws Throwable {

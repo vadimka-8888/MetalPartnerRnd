@@ -1,0 +1,32 @@
+.button {
+    display: block;
+    
+    box-sizing: border-box;
+    width: 7em;
+    height: auto;
+
+    text-align: center;
+    align-content: center;
+
+    overflow: hidden;
+    text-wrap: nowrap;
+
+    opacity: 1.0;
+    background: var(--color-button);
+    color: var(--color-button-text);
+    
+    border: 0px solid var(--color-button-border);
+    border-radius: 2px;
+
+    &.active {
+        background: var(--color-main);
+        color: var(--color-main-text);
+    }
+}
+
+.button:hover {
+    background: var(--color-background);
+    color: var(--color-main-text);
+
+    outline: 1px solid black;
+}

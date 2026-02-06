@@ -1,0 +1,21 @@
+#content {
+    padding-left: 3%;
+    padding-right: 3%;
+    width: 94%;
+}
+
+.article {
+    display: block;
+
+    width: 98%;
+    height: min-content;
+
+    padding-bottom: 10px;
+    margin: auto;
+
+    text-wrap: wrap;
+}
+
+.article > p {
+    width: 100%;
+}

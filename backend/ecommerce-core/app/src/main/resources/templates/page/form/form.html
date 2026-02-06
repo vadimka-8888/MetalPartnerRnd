@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://thymeleaf.org">
+    <head>
+        <title>Metal Partner</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="css/form/form.css">
+        <link rel="stylesheet" type="text/css" href="css/page/page.css">
+
+        <script src="js/popUp.js"></script>
+    </head>
+    <body style="background: black;">
+        <div id="order-form-button" th:fragment="form-button">
+            <div class="subject-to-overlay">
+                <div class="order-section roboto-mono-normal">
+                    <label class="button order-button rfs-8">
+                        Оставить заявку
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div id="order-form" th:fragment="form">
+            <div id="overlay-form-container" class="roboto-mono-normal">
+                <form>
+                    <input id="input-name" type="text" class="rfs-10" placeholder="Как к Вам обращаться?" required>
+                    <input id="input-contacts" type="text" class="rfs-10" placeholder="Введите свой номер телефона" required>
+                    <textarea id="input-letter" name="order" class="rfs-10" placeholder="Текст заявки" rows="10" cols="40"required></textarea>
+                    <button id="submit-button" class="button rfs-9" type="submit">
+                        Отправить
+                    </button>
+                    <button id="cancel-button" class="button rfs-9" onclick="togglePopUp()">
+                        Отмена
+                    </button>
+                    <div id="remark" class="rfs-9">
+                        Наши операторы свяжутся с вами в течении 15 минут
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

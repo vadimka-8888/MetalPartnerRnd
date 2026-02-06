@@ -1,0 +1,55 @@
+@import url("card.css");
+
+.service-card {
+    
+}
+
+.card-table {
+    background: linear-gradient(30deg, #111111, #FCFCFC 6%, #FCFCFC 70%, #111111) !important;
+
+}
+
+.card-picture {
+    display: block;
+
+    padding: 10px;
+
+    img {
+        display: block;
+
+        width: 90%;
+        height: 300px;
+
+        margin: auto;
+    }
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+
+    width: 90%;
+    height: 5vh;
+
+    padding: 5%;
+
+    justify-content: center;
+}
+
+.card-detail {
+    display: block;
+
+    height: 85%;
+    width: 10em;
+
+    border-radius: 8px;
+
+    transition: 
+            background 0.1s linear;
+}
+
+.card-detail:hover {
+    background: var(--color-button);
+    color: var(--color-header-text);
+    border: 2px solid var(--color-button-border);
+}

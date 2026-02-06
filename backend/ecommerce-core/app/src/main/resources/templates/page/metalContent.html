@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://thymeleaf.org">
+    <head>
+        <title>Metal Partner</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="../../../static/css/page/metalProductsContent.css">
+        <link rel="stylesheet" type="text/css" href="../../../static/css/page/page.css">
+        <link rel="stylesheet" type="text/css" href="../../../static/css/page/button/button.css">
+        <link rel="stylesheet" type="text/css" href="../../../static/css/text/text.css">
+    </head>
+    <body>
+        <div id="content" class="roboto-mono-normal" th:fragment="content">
+            <h2 class="rfs-1 subject-to-overlay">Каталог товаров</h2>
+            <div th:replace="~{page/form/form :: form-button}"></div>
+            <div id="catalog">
+                <div th:replace="~{page/card/metalCard :: product-card}"></div>
+            </div>
+
+        </div>
+    </body>
+</html>

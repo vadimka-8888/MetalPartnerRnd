@@ -1,0 +1,29 @@
+<svg width="200" height="6" viewBox="-100 -3 200 6" preserveAspectRatio="none"
+     xmlns="http://www.w3.org/2000/svg">
+     <style>
+          .cardLine {
+              stroke: #EA2B1F;
+              stroke-width: 1px;
+
+              <!--animation: 1.0s infinite normal linear resizing; -->
+          }
+
+          <!-- @keyframes resizing {
+               0% {
+                    transform: scale(1, 1);
+               }
+               100% {
+                    transform: scale(10, 1);
+               }
+          } -->
+     </style>
+
+    <line
+          class="cardLine"
+          x1="-65"
+          y1="0"
+          x2="65"
+          y2="0"
+     />
+    
+</svg>

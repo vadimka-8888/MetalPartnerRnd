@@ -12,13 +12,109 @@
 	--font-size-9: 0.5rem;
 	--font-size-10: 0.3rem;
 	
-	--main-color-1: #FFFAE3;
-	--main-color-2: #2E4057;
-	--main-color-3: #AA4465;
-	--main-color-image-1: #74A9D1;
-	--main-color-image-2: #B8DEF6;
-	--main-color-image-3: #77ADD1;
+	--color-main: #EA2B1F;
+	--color-secondary: #7D6B91;
+	--color-header-text: #F5F5F5;
+	--color-main-text: #111111;;
+	--color-background: #FCFCFC;
+	--color-card-background: #FCFCFC;
+	--color-icons: #EA2B1F;
+	--color-button: #EA2B1F;
+	--color-button-text: #FCFCFC;
+	--color-button-border: #111111;;
+	--color-button-highlight: #F8B7B4;
+
+	--color-image-1: #111111;
+	--color-image-2: #383836;
+	--color-image-2-highlighted: #484846;
+	--color-image-3: #8D8D8D;
+
+
+	--header-size: calc(14vh - (1800px - 100vw) * 0.0385);
+	--header-navigation-proportion: 34%;
 }
+
+.rfs-1 {
+	font-size: 1.0rem;
+}
+
+.rfs-2 {
+	font-size: 0.95rem;
+}
+
+.rfs-3 {
+	font-size: 0.9rem;
+}
+
+.rfs-4 {
+	font-size: 0.85rem;
+}
+
+.rfs-5 {
+	font-size: 0.8rem;
+}
+
+.rfs-6 {
+	font-size: 0.75rem;
+}
+
+.rfs-7 {
+	font-size: 0.7rem;
+}
+
+.rfs-8 {
+	font-size: 0.65rem;
+}
+
+.rfs-9 {
+	font-size: 0.6rem;
+}
+
+.rfs-10 {
+	font-size: 0.55rem;
+}
+
+.rfs-11 {
+	font-size: 0.5rem;
+}
+
+.rfs-12 {
+	font-size: 0.45rem;
+}
+
+.rfs-13 {
+	font-size: 0.4rem;
+}
+
+.rfs-14 {
+	font-size: 0.35rem;
+}
+
+.rfs-15 {
+	font-size: 0.3rem;
+}
+
+.rfs-16 {
+	font-size: 0.25rem;
+}
+
+.rfs-17 {
+	font-size: 0.2rem;
+}
+
+.rfs-18 {
+	font-size: 0.15rem;
+}
+
+.rfs-19 {
+	font-size: 0.1rem;
+}
+
+.rfs-20 {
+	font-size: 0.05rem;
+}
+
+
 
 .roboto-mono-normal {
   font-family: "Roboto Mono", monospace;

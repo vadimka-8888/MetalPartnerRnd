@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://thymeleaf.org">
+    <head>
+        <title>Metal Partner</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" th:href="@{'/css/main-constants.css'}">
+        <link rel="stylesheet" type="text/css" th:href="@{'/css/text/text.css'}">
+
+        <link rel="stylesheet" type="text/css" th:href="@{'/css/page/button/button.css'}">
+        <link rel="stylesheet" type="text/css" th:href="@{'/css/page/footer/footer.css'}">
+        <link rel="stylesheet" type="text/css" th:href="@{'/css/page/header/header.css'}">
+        <link rel="stylesheet" type="text/css" th:href="@{'/css/page/content.css'}">
+        <link rel="stylesheet" type="text/css" th:href="@{'/css/page/page.css'}">
+
+        <link rel="stylesheet" type="text/css" th:href="@{'/css/page/form/form.css'}">
+
+        <link th:each="stylesheet : ${fileNames}" rel="stylesheet" type="text/css" th:href="@{'/css/page' +'/'+${stylesheet}+'.css'}">
+
+        <script th:each="script : ${js}" th:src="@{'/js/'+${script}+'.js'}"></script>
+    </head>
+    <body>
+        <div id="page-header" th:insert="~{page/header/header :: header}"></div>
+        <div id="page-main">
+            <img th:src="@{/images/254856220_l.jpg}" />
+            <div id="page-main-scroll" class="subject-to-overlay">
+                <div id="header-space"></div>
+                <div id="page-content" th:insert="~{('page/' + ${fileNames[0]}) :: content}"></div>
+                <div id="page-footer" th:insert="~{page/footer/footer :: footer}"></div>
+            </div>
+            <div id="obscured-form" th:replace="~{page/form/form :: form}"></div>
+        </div>
+    </body>
+</html>

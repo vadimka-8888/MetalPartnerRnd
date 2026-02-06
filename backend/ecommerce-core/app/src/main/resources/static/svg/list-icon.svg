@@ -1,0 +1,27 @@
+<svg width="20" height="20" viewBox="-10 -10 20 20" preserveAspectRatio="none"
+     xmlns="http://www.w3.org/2000/svg">
+     <style>
+          .cardLine {
+              stroke: #414141;
+              stroke-width: 1px;
+              fill: #444444;
+
+              <!--animation: 1.0s infinite normal linear resizing; -->
+          }
+
+          <!-- @keyframes resizing {
+               0% {
+                    transform: scale(1, 1);
+               }
+               100% {
+                    transform: scale(10, 1);
+               }
+          } -->
+     </style>
+
+    <path
+          class="cardLine"
+          d="M 8 0 L -8 -8 L -8 8 Z"
+     />
+    
+</svg>

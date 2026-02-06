@@ -58,6 +58,7 @@ public class EcommerceCoreApplication implements WebMvcConfigurer {
 		registry.addResourceHandler("/icons/**").addResourceLocations("classpath:/static/icons/");
 		registry.addResourceHandler("/css/**").addResourceLocations("classpath:/static/css/");
 		registry.addResourceHandler("/js/**").addResourceLocations("classpath:/static/js/");
+		registry.addResourceHandler("/svg/**").addResourceLocations("classpath:/static/svg/");
 	}
 
 	@Bean

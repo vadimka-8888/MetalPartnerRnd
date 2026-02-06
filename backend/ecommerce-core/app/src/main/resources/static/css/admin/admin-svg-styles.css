@@ -1,4 +1,4 @@
-@import("variables.css");
+@import("admin-variables.css");
 
 .tab-triangle {
 	fill: var(--color-3);
